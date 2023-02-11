@@ -104,8 +104,6 @@ contract InSecureumApe is ERC721, Ownable {
 (C): 0.08 ETH  
 (D): 0.8 ETH  
 
-**[Answers]: D**
-
 ---
 
 **[Q2] The security concern(s) with _InSecureumApe_ access control is/are**
@@ -114,8 +112,6 @@ contract InSecureumApe is ERC721, Ownable {
 (B): Owner can arbitrarily mint _InSecureumApe_  
 (C): Single-step ownership change  
 (D): Missing event emits in and time-delayed effects of owner functions  
-
-**[Answers]: A, B, C, D**
 
 ---
 
@@ -126,8 +122,6 @@ contract InSecureumApe is ERC721, Ownable {
 (C): Potential integer overflow  
 (D): None of the above  
 
-**[Answers]: A, B, C**
-
 ---
 
 **[Q4] The total number of _InSecureumApe_ that can ever be minted is**
@@ -136,8 +130,6 @@ contract InSecureumApe is ERC721, Ownable {
 (B): `MAX_APES`  
 (C): `MAX_APES` + 30  
 (D): `type(uint256).max`  
-
-**[Answers]: D**
 
 ---
 
@@ -148,8 +140,6 @@ contract InSecureumApe is ERC721, Ownable {
 (C): Uses `_safeMint` to prevent locked/stuck NFTs  
 (D): None of the above  
 
-**[Answers]: B, C**
-
 ---
 
 **[Q6] The security concern(s) with _InSecureumApe_ is/are**
@@ -158,8 +148,6 @@ contract InSecureumApe is ERC721, Ownable {
 (B): Oracle price manipulation  
 (C): Reentrancy allowing bypass of `maxApePurchase` check  
 (D): None of the above  
-
-**[Answers]: A, C**
 
 ---
 
@@ -170,8 +158,6 @@ contract InSecureumApe is ERC721, Ownable {
 (C): May be triggered only 9 days after sale start  
 (D): Accounts for the fact that EVM only stores previous 256 block hashes  
 
-**[Answers]: A, B, D**
-
 ---
 
 **[Q8] Potential gas optimization(s) in _InSecureumApe_ is/are**
@@ -180,7 +166,5 @@ contract InSecureumApe is ERC721, Ownable {
 (B): Avoiding initializations of variables to default values of their types  
 (C): Use of immutables  
 (D): None of the above  
-
-**[Answers]: A, B, C**
 
 ---

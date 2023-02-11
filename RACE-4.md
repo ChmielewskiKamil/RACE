@@ -133,8 +133,6 @@ function _transfer(
 (C): Non-standard _transfer_  
 (D): None of the above  
 
-**[Answers]: A, B**
-
 ---
 
 **[Q2] In _InSecureum_**
@@ -143,8 +141,6 @@ function _transfer(
 (B): `_burn()` can have _external_ visibility instead of _internal_  
 (C): `_mint()` should have _internal_ visibility instead of _external_  
 (D): None of the above  
-
-**[Answers]: A, C**
 
 ---
 
@@ -155,8 +151,6 @@ function _transfer(
 (C): Has an optimisation indicative of unlimited approvals  
 (D): None of the above  
 
-**[Answers]: A, B, C**
-
 ---
 
 **[Q4] In _InSecureum_**
@@ -165,8 +159,6 @@ function _transfer(
 (B): _decreaseAllowance_ is susceptible to an integer overflow  
 (C): _decreaseAllowance_ does not allow reducing allowance to zero  
 (D): _decreaseAllowance_ can be optimised with `unchecked{}`  
-
-**[Answers]: C, D**
 
 ---
 
@@ -177,8 +169,6 @@ function _transfer(
 (C): Is susceptible to an integer underflow  
 (D): None of the above  
 
-**[Answers]: D**
-
 ---
 
 **[Q6] _InSecureum_ `_mint()`**
@@ -187,8 +177,6 @@ function _transfer(
 (B): Has an incorrect event emission  
 (C): Has an incorrect update of account balance  
 (D): None of the above
-
-**[Answers]: A, C**
 
 ---
 
@@ -199,8 +187,6 @@ function _transfer(
 (C): Has an incorrect update of account balance  
 (D): None of the above
 
-**[Answers]: B**
-
 ---
 
 **[Q8] _InSecureum_ `_approve()`**
@@ -209,7 +195,5 @@ function _transfer(
 (B): Has incorrect error messages  
 (C): Has an incorrect update of allowance  
 (D): None of the above
-
-**[Answers]: B, C**
 
 ---

@@ -1,4 +1,5 @@
 **[Q1] The use of pragma in the given contract snippet**
+
 ```
 pragma solidity ^0.6.0;
 
@@ -7,16 +8,16 @@ contract test {
    // Assume this contract can work correctly without modifications across 0.6.x/0.7.x/0.8.x compiler versions
 }
 ```
+
 (A): Is incorrect and will cause a compilation error  
 (B): Allows testing with 0.6.11 but accidental deployment with buggy 0.6.5  
 (C): Is illustrative of risks from using a much older Solidity version (assume current version is 0.8.9)  
-(D): None of the above 
-
-**[Answers] B,C**  
+(D): None of the above
 
 ---
 
 **[Q2] The given contract snippet has**  
+
 ```
 pragma solidity 0.8.4;
 
@@ -29,16 +30,16 @@ contract test {
    }
 }
 ```
+
 (A): Unprotected call to *selfdestruct* allowing anyone to destroy this contract  
 (B): Dangerous use of zero address leading to burning of contract balance  
 (C): A compiler error because of the use of the *kill* reserved keyword  
 (D): None of the above  
 
-**[Answers] A,B**  
-
 ---
 
 **[Q3] The given contract snippet has**  
+
 ```
 pragma solidity 0.8.4;
 
@@ -62,13 +63,12 @@ contract test {
 (C): Unprotected withdrawal of funds  
 (D): None of the above  
 
-**[Answers] A,C**
-
 ---
 
 **[Q4] In the given contract snippet**
 
 pragma solidity 0.8.4;
+
 ```
 contract test {
     
@@ -98,11 +98,10 @@ contract test {
 (C): *getAddress* reverts if *check* is false  
 (D): None of the above  
 
-**[Answers] A,B** 
-
 ---
 
 **[Q5] The security concern(s) in the given contract snippet is/are**  
+
 ```
 pragma solidity 0.8.4;
 
@@ -125,11 +124,10 @@ contract test {
 (C): *delegate()* may be missing *onlyAdmin* modifier  
 (D): *delegate()* does not check for contract existence at *addr*  
 
-**[Answers] A,B,C,D**
-
 ---
 
 **[Q6] The vulnerability/vulnerabilities present in the given contract snippet is/are**
+
 ```
 pragma solidity 0.7.0;
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
@@ -149,16 +147,16 @@ contract test {
     }
 }
 ```
+
 (A): Reentrancy  
 (B): Integer underflow leading to wrapping  
 (C): Missing check on user balance in *withdraw()*  
 (D): All of the above  
 
-**[Answers] B,C or A,B,C or A,B,C,D or D**
-
 ---
 
 **[Q7] The security concern(s) in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 
@@ -179,11 +177,10 @@ contract test {
 (C): *block.timestamp* is an insecure source of randomness  
 (D): Integer overflow  
 
-**[Answers] B,C**
-
 ---
 
 **[Q8] The security concern(s) in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 
@@ -209,11 +206,10 @@ contract test {
 (C): Assumption on contract balance might cause a revert  
 (D): Missing event for critical *emergencyWithdraw()* function  
 
-**[Answers] B,D**
-
 ---
 
 **[Q9] The given contract snippet is vulnerable because of**
+
 ```
 pragma solidity 0.8.4;
 
@@ -236,11 +232,10 @@ contract test {
 (C): Incorrect use of *msg.sender*  
 (D): Use of strict equality (!=) may break the *MAX_FUND_RAISE* constraint  
 
-**[Answers] D**
-
 ---
 
 **[Q10] In the given contract snippet, the require check will**
+
 ```
 pragma solidity 0.8.4;
 
@@ -260,11 +255,10 @@ contract test {
 (C): Pass always  
 (D): Fail always  
 
-**[Answers] B**
-
 ---
 
 **[Q11] The security concern(s) in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 
@@ -285,11 +279,10 @@ contract test {
 (C): Single-step change of critical address  
 (D): Missing event for critical function  
 
-**[Answers] A,B,C,D**
-
 ---
 
 **[Q12] The security concern(s) in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 
@@ -324,11 +317,10 @@ contract test {
 (C): Missing zero-address validation for *_pool* in *setPoolAddress()*  
 (D): Transaction order dependence risk from *admin* front-running with pool address change  
 
-**[Answers] A,C,D**
-
 ---
 
 **[Q13] The security concern(s) in the given proxy-based implementation contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 import "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/proxy/utils/Initializable.sol";
@@ -361,11 +353,10 @@ contract test is Initializable {
 (C): *rewards* will be 0 in the proxy contract before *setRewards()* is called by it  
 (D): All the above  
 
-**[Answers] B,C**
-
 ---
 
 **[Q14] The security concern(s) in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 
@@ -403,11 +394,10 @@ contract test {
 (C): Unchecked return value of *transfer()* (assuming it returns a boolean/other value and does not revert on failure)  
 (D): Potential reverts due to mismatched lengths of *recipients* and *amounts* arrays  
 
-**[Answers] A,C,D**
-
 ---
 
 **[Q15] The vulnerability/vulnerabilities present in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol";
@@ -431,11 +421,10 @@ contract test {
 (C): Integer underflow leading to wrapping  
 (D): None of the above  
 
-**[Answers] A**
-
 ---
 
 **[Q16] The security concern(s) in the given contract snippet is/are**
+
 ```
 pragma solidity 0.8.4;
 
@@ -453,7 +442,5 @@ function verify(address signer, bytes32 memory hash, bytes32 sigR, bytes32 sigS,
 (B): Missing use of nonce in message hash may allow replay attacks across transactions  
 (C): Missing use of *chainID* in message hash may allow replay attacks across chains  
 (D): Missing zero-address check for *ecrecover* return value may allow invalid signatures  
-
-**[Answers] A,B,C,D**  
 
 ---

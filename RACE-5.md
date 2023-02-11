@@ -250,8 +250,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (C): May be optimised by changing its visibility to _external_  
 (D): None of the above  
 
-**[Answers]: D**
-
 ---
 
 **[Q2] In _InSecureum_, array lengths mismatch check is missing in**
@@ -260,8 +258,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (B): `_safeBatchTransferFrom()`  
 (C): `_mintBatch()`  
 (D): `_burnBatch()`  
-
-**[Answers]: A, B, C, D**
 
 ---
 
@@ -272,8 +268,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (C): Missing zero-address validation  
 (D): None of the above  
 
-**[Answers]: A, B, C**
-
 ---
 
 **[Q4] The security concern(s) with _InSecureum_ `_safeBatchTransferFrom()` is/are**
@@ -282,8 +276,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (B): Susceptibility to an integer underflow  
 (C): Incorrect balance update  
 (D): None of the above  
-
-**[Answers]: A, C**
 
 ---
 
@@ -294,8 +286,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (C): Allows burning of tokens  
 (D): None of the above  
 
-**[Answers]: A, B, C**
-
 ---
 
 **[Q6] The security concern(s) with _InSecureum_ `_burn()` is/are**
@@ -304,8 +294,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (B): Susceptibility to an integer underflow  
 (C): Incorrect balance update  
 (D): None of the above  
-
-**[Answers]: D**
 
 ---
 
@@ -316,8 +304,6 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (C): Call to incorrect _isContract_ implementation  
 (D): None of the above  
 
-**[Answers]: B, C**
-
 ---
 
 **[Q8] The security concern(s) with _InSecureum_ _isContract()_ implementation is/are**
@@ -326,7 +312,5 @@ contract InSecureum is Context, ERC165, IERC1155, IERC1155MetadataURI {
 (B): Incorrect operator in the comparison  
 (C): Unnecessary because Ethereum only has Contract accounts  
 (D): None of the above  
-
-**[Answers]: B**
 
 ---

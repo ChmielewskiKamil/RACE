@@ -63,8 +63,6 @@ contract USDCCollateral {
 (C): USDC should not be used as collateral for loans\
 (D): None of the above
 
-**[Answers]: B**
-
 ---
 
 **[Q2] Assuming payFees() is periodically called by a function, which iteratively calls payFees() of all collateral contracts, the security concern(s) is/are:**
@@ -74,10 +72,7 @@ contract USDCCollateral {
 (C): payFees() might re-enter the contract, paying all fees again\
 (D): You can deposit at any point during the period
 
-**[Answers]: B, D**
-
 ---
-
 
 ```solidity
 modifier noETH {
@@ -92,8 +87,6 @@ modifier noETH {
 (B): Developers should use the modifier because it achieves a different effect from omitting the payable keyword on deposit function\
 (C): Developers should remove the modifier but achieve the required effect by omitting the payable keyword on deposit function\
 (D): None of the above
-
-**[Answers]: C**
 
 ---
 
@@ -119,8 +112,6 @@ function anotherPoolOperation(...., address pool) public checkedPool { ... }
 (B): Make all functions using checkedPool external\
 (C): Everything is fine; this code has no problems\
 (D): None of the above
-
-**[Answers]: A**
 
 ---
 
@@ -207,8 +198,6 @@ contract ERC20Collateral {
 (C): The lender can liquidate other positions with his callback and make more money\
 (D): The liquidator can take the full collateral amount with reentrancy
 
-**[Answers]: B**
-
 ---
 
 **[Q6] Assume that the vulnerability referenced in the previous question has been fixed by changing the line with the Liquidation event emission to emit Liquidation(lender, oldDeposit). The protocol team has built a bot that monitors and liquidates under-collateralized positions automatically. Even though the bot does not monitor the mempool, it simulates the full transaction and, if successful, sends transactions with the exact amount to be able to execute the function + 100000 gas for minimal execution in the onLiquidation() callback. Which of these attacks can be executed in a harmful way towards the protocol?**
@@ -218,8 +207,6 @@ contract ERC20Collateral {
 (C): The lender can make their position “unliquidatable” by consuming all the gas provided in the callback\
 (D): The liquidated lender can tokenize the extra gas in the callback and make a profit
 
-**[Answers]: B**
-
 ---
 
 **[Q7] In the context of Questions 5 and 6, someone built a MEV frontrunner bot that is exploiting liquidations in different protocols. It monitors the mempool for collateral contracts deployed from the lending factory and simulates transactions in a mainnet fork within Foundry to check whether it should attack them. The logic behind the bot is that it checks only the token’s “Transfer” events for its success conditions. More precisely, it checks if there is liquidity in an AMM to exchange to ETH and make sure it turns a profit at the end. If so, it sends a Flashbot bundle to make a profit by frontrunning the liquidator. Knowing the factory for this new contract is permissionless, how could you extract assets out of this bot?**
@@ -228,8 +215,6 @@ contract ERC20Collateral {
 (B): Build a similar bot that frontruns this one\
 (C): Deploy a collateral contract with your own custom token and seed an AMM pool with some ETH and this token, tricking the bot\
 (D): There is no way to do it
-
-**[Answers]: C**
 
 ---
 
@@ -272,7 +257,5 @@ function transferCollateral(
 (B): Lender A can pretend to transfer to lender B but then steal amount from him\
 (C): Lender A can grief lender B by sending a malformed signature (assuming the S parameter is correct)\
 (D): Lender B can steal from another lender C, by submitting a malformed signature.
-
-**[Answers]: A**
 
 ---

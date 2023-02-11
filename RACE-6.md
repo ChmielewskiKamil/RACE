@@ -494,8 +494,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (C): Missing time-delayed change of critical parameters  
 (D): Accidentally sent Ether gets locked in contract  
 
-**[Answers]: A, C**
-
 ---
 
 **[Q2] The security concern(s) with _InSecureumLand_ _setOperator()_ is/are**
@@ -504,8 +502,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (B): Missing event emission  
 (C): Incorrect modifier  
 (D): None of the above  
-
-**[Answers]: A, B**
 
 ---
 
@@ -516,8 +512,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (C): Minting could exceed `maxMintPerAddress`  
 (D): None of the above  
 
-**[Answers]: A**
-
 ---
 
 **[Q4] Missing threshold check(s) on parameter(s) is/are a concern in**
@@ -526,8 +520,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (B): `startPublicSale`  
 (C): `contributorsClaimLand`  
 (D): None of the above  
-
-**[Answers]: B, C**
 
 ---
 
@@ -538,8 +530,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (C): Anyone can call `contributorsClaimLand`  
 (D): None of the above  
 
-**[Answers]: C**
-
 ---
 
 **[Q6] The security concern(s) with _InSecureumLand_ random number usage is/are**
@@ -548,8 +538,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (B): It depends on miner-influenceable `blockhash`  
 (C): It depends on deprecated Chainlink VRF v1  
 (D): None of the above  
-
-**[Answers]: C**
 
 ---
 
@@ -560,8 +548,6 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (C): Minimal inlined comments  
 (D): None of the above  
 
-**[Answers]: B, C**
-
 ---
 
 **[Q8] Potential gas optimization(s) (after appropriate security considerations) in _InSecureumLand_ is/are**
@@ -570,7 +556,5 @@ contract InSecureumLand is ERC721Enumerable, Ownable, ReentrancyGuard, VRFConsum
 (B): Using `_mint` instead of `_safeMint` if mint addresses are known to be EOA  
 (C): Using `unchecked` in for loop increments  
 (D): None of the above  
-
-**[Answers]: A, B, C**
 
 ---

@@ -1,4 +1,5 @@
 **Note**: All 8 questions in this quiz are based on the _InSecureumToken_ contract shown below. This is the same contract you see for all the 8 questions in this quiz. The _InSecureumToken_ contract implements a token contract which allows users to buy tokens by depositing Ether (at a certain conversion ratio), and transfer tokens.
+
 ```
 pragma solidity 0.7.0;
 
@@ -57,8 +58,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (C): ERC721  
 (D): None of the above  
 
-**[Answers]: D** 
-
 ---
 
 **[Q2] To avoid lock of funds, the following feature(s) MUST be implemented before contract deployment**  
@@ -67,8 +66,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (B): A _burn()_ function  
 (C): A way to withdraw/exchange/use Ether from the contract  
 (D): None of the above  
-
-**[Answers]: C**  
 
 ---
 
@@ -79,8 +76,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (C): _transfer()_ can be external  
 (D): _safeAdd()_ can be public  
 
-**[Answers]: C,D**
-
 ---
 
 **[Q4] The total supply is limited by**  
@@ -89,8 +84,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (B): `100 * 10**18`  
 (C): `100`  
 (D): None of the above  
-
-**[Answers]: D**  
 
 ---
 
@@ -101,8 +94,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (C): A division by zero allows one to trap/freeze the system  
 (D): None of the above  
 
-**[Answers]: B**  
-
 ---
 
 **[Q6] The following issue(s) is/are present in the codebase**  
@@ -111,8 +102,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (B): A lack of access control allows one to receive tokens for free  
 (C): Incorrect balance update allows one to receive new tokens for free  
 (D): None of the above  
-
-**[Answers]: C**
 
 ---
 
@@ -123,8 +112,6 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (C): A reentrancy allows one to receive new tokens for free  
 (D): None of the above  
 
-**[Answers]: D**  
-
 ---
 
 **[Q8] The following issue(s) is/are present in the codebase**  
@@ -133,7 +120,5 @@ function safeAdd(uint a, uint b) pure internal returns(uint) {
 (B): An integer overflow allows one to receive new tokens for free  
 (C): An integer overflow allows one to trap/freeze the system  
 (D): None of the above  
-
-**[Answers]: D or B or C or B,C**  
 
 ---

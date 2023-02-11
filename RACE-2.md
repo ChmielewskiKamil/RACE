@@ -1,4 +1,5 @@
 **Note**: All 8 questions in this quiz are based on the _InSecureumDAO_ contract snippet shown below. This is the same contract snippet you will see for all the 8 questions in this quiz. The _InSecureumDAO_ contract snippet illustrates some basic functionality of a Decentralized Autonomous Organization (DAO) which includes the opening of the DAO for memberships, allowing users to join as members by depositing a membership fee, creating proposals for voting, casting votes, etc. Assume that all other functionality (that is not shown or represented by ...) is implemented correctly.
+
 ```
 pragma solidity 0.8.4;
 import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol';
@@ -74,14 +75,12 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 
 ---
 
-**[Q1] Based on the comments and code shown in the _InSecureumDAO_ snippet**   
+**[Q1] Based on the comments and code shown in the _InSecureumDAO_ snippet**
 
 (A): DAO is meant to be opened only by the _admin_ by making an Ether deposit to the contract  
 (B): DAO can be opened by anyone by making an Ether deposit to the contract  
 (C): DAO requires an exact payment of _membershipFee_ to join the DAO  
 (D): None of the above  
-
-**[Answers]: A,B,C**
 
 ---
 
@@ -92,8 +91,6 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (C): All critical privileged-role functions have events emitted  
 (D): None of the above  
 
-**[Answers]: D**
-
 ---
 
 **[Q3] Reentrancy protection only on _join()_ (assume it’s correctly specified) indicates that**  
@@ -102,8 +99,6 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (B): _join()_ likely makes untrusted external call(s) but not the other contract functions  
 (C): Both A and B  
 (D): Neither A nor B  
-
-**[Answers]: B**
 
 ---
 
@@ -114,8 +109,6 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (C): _getWinningOutcome()_ to prevent non-members from viewing winning outcomes  
 (D): None of the above  
 
-**[Answers]: A,B**  
-
 ---
 
 **[Q5] A commit/reveal scheme (a cryptographic primitive that allows one to commit to a chosen value while keeping it hidden from others, with the ability to reveal the committed value later) is relevant for**
@@ -124,8 +117,6 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (B): _createVote()_ to not disclose the possible outcomes during creation  
 (C): _castVote()_ to not disclose the vote being cast  
 (D): All the above  
-
-**[Answers]: C**
 
 ---
 
@@ -136,8 +127,6 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (C): _getWinningOutcome()_ for existing `_voteId`  
 (D): _setMembershipFee()_ for sanity/threshold checks on `_fee`  
 
-**[Answers]: A,D**  
-
 ---
 
 **[Q7] _removeAllMembers()_ function**  
@@ -147,8 +136,6 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (C): Is a critical function missing an event emission  
 (D): None of the above  
 
-**[Answers]: A,C**  
-
 ---
 
 **[Q8] _InSecureumDAO_ will not be susceptible to something like the 2016 “DAO exploit”**  
@@ -157,7 +144,5 @@ contract InSecureumDAO is Pausable, ReentrancyGuard {
 (B): Only if it does not have a withdraw Ether function vulnerable to reentrancy and makes no external calls  
 (C): Because Ethereum protocol was fixed after the DAO exploit to prevent such exploits  
 (D): Because Solidity language was fixed after the DAO exploit to prevent such exploits  
-
-**[Answers]: B**
 
 ---

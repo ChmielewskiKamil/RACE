@@ -197,8 +197,6 @@ abstract contract ERC721TokenReceiver {
 (C): NFT approvals are tracked by `getApproved`  
 (D): NFT operator can transfer all of owner’s NFTs  
 
-**[Answers]: A, B, C, D**
-
 ---
 
 **[Q2] _InSecureumERC721_ recognizes the following role(s)**
@@ -207,8 +205,6 @@ abstract contract ERC721TokenReceiver {
 (B): Spender (Approved address)  
 (C): Operator  
 (D): None of the above  
-
-**[Answers]: A, B, C**
 
 ---
 
@@ -219,8 +215,6 @@ abstract contract ERC721TokenReceiver {
 (C): Transparency by emitting event  
 (D): None of the above  
 
-**[Answers]: A, B, C**
-
 ---
 
 **[Q4] The security concerns in `_burn` include**
@@ -229,8 +223,6 @@ abstract contract ERC721TokenReceiver {
 (B): Potential integer underflow because of unchecked  
 (C): Incorrect emission of event  
 (D): None of the above  
-
-**[Answers]: A**
 
 ---
 
@@ -241,8 +233,6 @@ abstract contract ERC721TokenReceiver {
 (C): Validating if the recipient is an ERC721 aware contract  
 (D): None of the above  
 
-**[Answers]: A, C**
-
 ---
 
 **[Q6] Function approve**
@@ -251,8 +241,6 @@ abstract contract ERC721TokenReceiver {
 (B): Allows the NFT spender to approve an operator  
 (C): Allows the NFT operator to approve a spender  
 (D): None of the above  
-
-**[Answers]: A, C**
 
 ---
 
@@ -263,8 +251,6 @@ abstract contract ERC721TokenReceiver {
 (C): Revokes everyone’s approvals to manage `msg.sender`’s NFTs  
 (D): None of the above  
 
-**[Answers]: D**
-
 ---
 
 **[Q8] The security concern(s) in `transferFrom` include**
@@ -273,7 +259,5 @@ abstract contract ERC721TokenReceiver {
 (B): NFTs potentially stuck in recipient contracts  
 (C): Potential integer underflow  
 (D): None of the above  
-
-**[Answers]: A, B, C**
 
 ---
